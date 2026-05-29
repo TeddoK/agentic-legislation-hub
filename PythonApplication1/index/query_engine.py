@@ -9,22 +9,23 @@ from llama_index.llms.openai_like import OpenAILike
 from llama_index.embeddings.fastembed import FastEmbedEmbedding
 
 ROOT = pathlib.Path(__file__).parent.parent
-load_dotenv(ROOT / ".env")   # loads GEMINI_API_KEY
+load_dotenv(ROOT / ".env")   # loads LLM_API_KEY etc.
 
 # Retrieval uses local (fastembed) embeddings — no API rate limit or cost.
-# Gemini (via its OpenAI-compatible endpoint) is used only for answer synthesis.
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_BASE_URL = os.getenv("GEMINI_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+# The LLM (any OpenAI-compatible provider; currently Groq) is used only for
+# answer synthesis.
+LLM_API_KEY = os.getenv("LLM_API_KEY")
+LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.groq.com/openai/v1")
+LLM_MODEL = os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
 EMBED_MODEL = os.getenv("EMBED_MODEL", "BAAI/bge-small-en-v1.5")
 INDEX_DIR = ROOT / "index_storage"
 
 
-def _gemini_llm():
+def _llm():
     return OpenAILike(
-        model=GEMINI_MODEL,
-        api_base=GEMINI_BASE_URL,
-        api_key=GEMINI_API_KEY,
+        model=LLM_MODEL,
+        api_base=LLM_BASE_URL,
+        api_key=LLM_API_KEY,
         is_chat_model=True,
         is_function_calling_model=False,
         context_window=128_000,
@@ -46,8 +47,8 @@ def load_engine():
     # The embed model must match the one used at build time so query vectors
     # land in the same space as the stored document vectors.
     Settings.embed_model = _embed_model()
-    Settings.llm = _gemini_llm()
+    Settings.llm = _llm()
 
     storage = StorageContext.from_defaults(persist_dir=str(INDEX_DIR))
     index = load_index_from_storage(storage)
-    return index.as_query_engine(llm=_gemini_llm())
+    return index.as_query_engine(llm=_llm())

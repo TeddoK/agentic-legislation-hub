@@ -18,13 +18,13 @@ from index.build_index import build_or_update
 from processing.classify_impact import classify_components
 
 # Configuration
-# Gemini exposes an OpenAI-compatible endpoint, so the same OpenAI SDK client
-# works by pointing it at Gemini's base URL and using a Gemini model name.
-GEMINI_BASE_URL = os.getenv("GEMINI_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
-MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+# The LLM is any OpenAI-compatible provider (currently Groq), so the standard
+# OpenAI SDK works by pointing it at the provider's base URL.
+LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.groq.com/openai/v1")
+MODEL = os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
 CLIENT = OpenAI(
-    api_key=os.getenv("GEMINI_API_KEY"),
-    base_url=GEMINI_BASE_URL,
+    api_key=os.getenv("LLM_API_KEY"),
+    base_url=LLM_BASE_URL,
 )
 ADMIN_TOKEN = os.getenv("ADMIN_TOKEN", "supersecret")
 COOKIE_DIR = Path(__file__).parent.parent / "cookie_banners"
@@ -183,23 +183,51 @@ async def query(body: QueryBody):
     except Exception:
         jurisdictions = []
 
-    # 5) cookie banner impact
+    # 5) cookie banner impact — audit all banners in a single LLM call
+    banner_files = sorted(COOKIE_DIR.glob("*.json"))
+    # Banner configs can be very large (100s of KB); send only a compact,
+    # truncated view so the request stays within the LLM's token limits.
+    BANNER_CHARS = 1200
+    banners = []
+    for path in banner_files:
+        try:
+            cfg = json.loads(path.read_text(encoding="utf-8", errors="ignore"))
+        except json.JSONDecodeError:
+            continue
+        snippet = json.dumps(cfg, ensure_ascii=False)[:BANNER_CHARS]
+        banners.append({"file": path.name, "config": snippet})
+
     banner_assessments = []
-    for path in COOKIE_DIR.glob("*.json"):
-        data = json.loads(path.read_text(encoding="utf-8", errors="ignore"))
+    if banners:
         audit_msgs = [
-            {"role":"system","content":(
-                "You are a privacy-compliance auditor. Return EXACTLY one JSON object: {\"impacted\": true|false, \"explanation\": \"...\"}."
+            {"role": "system", "content": (
+                "You are a privacy-compliance auditor. For EACH cookie banner provided, decide whether "
+                "the given regulations impact it. Return EXACTLY one JSON array, one object per banner, "
+                "in the same order, each: {\"file\": \"<file>\", \"impacted\": true|false, \"explanation\": \"...\"}."
             )},
-            {"role":"user","content":f"Regulations:\n{polished}\n\nBanner JSON:\n{json.dumps(data)}"}
+            {"role": "user", "content": (
+                f"Regulations:\n{polished}\n\nBanners:\n" +
+                "\n".join(f"- {b['file']}: {b['config']}" for b in banners)
+            )},
         ]
         resp = CLIENT.chat.completions.create(model=MODEL, messages=audit_msgs, temperature=0.0)
-        raw = resp.choices[0].message.content.strip()
         try:
-            assessment = parse_json(raw)
+            parsed = parse_json(resp.choices[0].message.content)
+            if isinstance(parsed, dict):
+                parsed = [parsed]
+            by_file = {a.get("file"): a for a in parsed if isinstance(a, dict)}
+            for b in banners:
+                a = by_file.get(b["file"], {})
+                banner_assessments.append({
+                    "file": b["file"],
+                    "impacted": a.get("impacted"),
+                    "explanation": a.get("explanation", ""),
+                })
         except json.JSONDecodeError:
-            assessment = {"impacted": None, "explanation": raw}
-        banner_assessments.append({"file": path.name, **assessment})
+            banner_assessments = [
+                {"file": b["file"], "impacted": None,
+                 "explanation": "Could not parse auditor response."} for b in banners
+            ]
 
     # 6) return
     return {
