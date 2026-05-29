@@ -1,0 +1,20 @@
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# LLM: Gemini via its OpenAI-compatible endpoint (no OpenAI account needed)
+openai>=1.30
+llama-index>=0.14,<0.15
+llama-index-llms-openai-like>=0.5
+
+# Retrieval: local on-device embeddings (no API rate limit / cost)
+llama-index-embeddings-fastembed>=0.6
+fastembed>=0.8
+
+# Scraping / data ingestion (index rebuild fallback)
+beautifulsoup4==4.12.3
+requests==2.31.0
+feedparser>=6.0
+
+# Config
+python-dotenv==1.0.1

@@ -1,0 +1,488 @@
+{
+  "Template": {
+    "AcceptAllCookiesText": "Accept All Cookies",
+    "AutoShowModal": false,
+    "Categories": [
+      {
+        "Cookies": [
+          {
+            "ChannelID": 1238,
+            "ChannelType": "Delivery performance",
+            "ChannelTypeParent": "Cookies: Performance",
+            "DefaultValue": false,
+            "DisplayOrder": 2,
+            "IsLegitimateInterest": false,
+            "IsOptIn": true,
+            "Statements": [
+              {
+                "StatementID": 809,
+                "StatementText": "<p>The main aim of a performance cookie is to gather data on how visitors interact with the website. This cookie will also record how often the website is visited and will monitor any performance issues.</p>"
+              }
+            ],
+            "GpcEnabled": false
+          }
+        ],
+        "ChannelID": 9,
+        "ChannelType": "Cookies: Performance",
+        "ChannelTypeParent": "Cookies: Performance",
+        "DefaultValue": false,
+        "DisplayOrder": 2,
+        "IsLegitimateInterest": false,
+        "IsOptIn": true,
+        "Statements": [
+          {
+            "StatementID": 8,
+            "StatementText": "Please select the cookies that you would like to accept below. The purpose of each cookie is explained in turn."
+          }
+        ],
+        "GpcEnabled": false
+      },
+      {
+        "Cookies": [
+          {
+            "ChannelID": 1488,
+            "ChannelType": "Delivery Functionality",
+            "ChannelTypeParent": "1st Party Cookies",
+            "DefaultValue": false,
+            "DisplayOrder": 3,
+            "IsLegitimateInterest": false,
+            "IsOptIn": true,
+            "Statements": [
+              {
+                "StatementID": 1031,
+                "StatementText": "<p>FunctionalityConsent</p>"
+              }
+            ],
+            "GpcEnabled": false
+          },
+          {
+            "ChannelID": 1298,
+            "ChannelType": "test",
+            "ChannelTypeParent": "1st Party Cookies",
+            "DefaultValue": false,
+            "DisplayOrder": 4,
+            "IsLegitimateInterest": false,
+            "IsOptIn": true,
+            "Statements": [
+              {
+                "StatementID": 867,
+                "StatementText": "<p>Lorem ipsum odor amet, consectetuer adipiscing elit. Congue a purus conubia lobortis curabitur vel. Elit eu justo taciti nec laoreet urna egestas platea venenatis. Amet suspendisse magna placerat eleifend cras vivamus tortor imperdiet. Habitasse scelerisque penatibus dignissim tincidunt aliquet? Fames laoreet bibendum lacus odio imperdiet euismod mi accumsan. Nullam potenti libero suscipit lorem vel mollis. Taciti ornare nullam aliquet viverra ligula odio molestie porta.</p><p><br></p><p>Ipsum molestie amet morbi molestie netus molestie. Pharetra arcu a posuere vestibulum metus ultricies risus cursus. Proin rutrum congue potenti fringilla ornare. Risus imperdiet posuere ullamcorper vehicula et lectus tempor. Ex euismod dignissim in felis tellus hendrerit ac. Pellentesque iaculis convallis rutrum purus ad ac praesent nulla. Sagittis diam nostra rutrum donec tempor? Parturient nascetur fringilla massa inceptos massa primis purus iaculis potenti. Litora est mollis aliquet ac nulla</p>"
+              }
+            ],
+            "GpcEnabled": false
+          },
+          {
+            "ChannelID": 1051,
+            "ChannelType": "Basic - Universal - User Consent - 1st Party",
+            "ChannelTypeParent": "1st Party Cookies",
+            "DefaultValue": false,
+            "DisplayOrder": 5,
+            "IsLegitimateInterest": false,
+            "IsOptIn": true,
+            "Statements": [
+              {
+                "StatementID": 638,
+                "StatementText": "<p>2 Cookies - Is Run First</p>"
+              }
+            ],
+            "GpcEnabled": false
+          }
+        ],
+        "ChannelID": 4,
+        "ChannelType": "1st Party Cookies",
+        "ChannelTypeParent": "1st Party Cookies",
+        "DefaultValue": false,
+        "DisplayOrder": 3,
+        "IsLegitimateInterest": false,
+        "IsOptIn": true,
+        "Statements": [
+          {
+            "StatementID": 7,
+            "StatementText": "<p>Go on, select the cookies that you would like to accept below. The purpose of each cookie is explained in turn. </p>"
+          }
+        ],
+        "GpcEnabled": false
+      },
+      {
+        "Cookies": [
+          {
+            "ChannelID": 25,
+            "ChannelType": "3rd Party Cookie",
+            "ChannelTypeParent": "Cookies: 3rd Party",
+            "DefaultValue": false,
+            "DisplayOrder": 7,
+            "IsLegitimateInterest": false,
+            "IsOptIn": true,
+            "Statements": [
+              {
+                "StatementID": 26,
+                "StatementText": "These cookies are not created by the website you are currently visiting. One of the main aims of these cookies is for online advertising, which is added to the website through adding scripts or tags."
+              }
+            ],
+            "GpcEnabled": false
+          }
+        ],
+        "ChannelID": 3,
+        "ChannelType": "Cookies: 3rd Party",
+        "ChannelTypeParent": "Cookies: 3rd Party",
+        "DefaultValue": false,
+        "DisplayOrder": 4,
+        "IsLegitimateInterest": false,
+        "IsOptIn": true,
+        "Statements": [
+          {
+            "StatementID": 5,
+            "StatementText": "Please select the cookies that you would like to accept below. The purpose of each cookie is explained in turn."
+          }
+        ],
+        "GpcEnabled": false
+      }
+    ],
+    "CloseText": "Close",
+    "CookieDropBehaviourType": 1,
+    "ConsentOptInText": "Opt In",
+    "ConsentOptOutText": "Opt Out",
+    "CookieNameText": "Cookie Name",
+    "CookieText": "Cookie",
+    "DescriptionText": "Description",
+    "DisplayCookieSettingsButton": true,
+    "FooterHTML": "",
+    "ForceBannerInteraction": false,
+    "HeaderHTML": "",
+    "HideAcceptAllButton": false,
+    "HideCookiesText": "Hide Cookies",
+    "HidePreBanner": false,
+    "HideRejectAllButton": false,
+    "HideViewOptionsButton": false,
+    "ImageUrl": null,
+    "LegitimateInterestTabText": "Legitimate Interests",
+    "MoreInformationText": "More information",
+    "OpenCookieSettingsText": "Open Cookie Settings",
+    "PreBannerText": "<p><strong>We care about your privacy</strong><br><br>By clicking \"Accept All Cookies\", you agree to the storing of Cookies on your device to enhance site navigation, analyse site usage and assist in our marketing efforts.</p>",
+    "PrivacyPolicies": null,
+    "RejectAllCookiesText": "Reject All Cookies",
+    "SavePreferenceText": "Save Preferences",
+    "ShowLegitimateInterestTab": false,
+    "StrictlyNecessaryDescription": "These cookies are necessary for website functions such as setting your privacy preferences, logging in or completing forms. By using this site, you agree we may place these cookies on your device.",
+    "StrictlyNecessaryName": "Strictly Necessary Cookies",
+    "UserConsentTabText": "User Consent",
+    "ViewAllOptionsText": "Manage Preferences",
+    "ViewCookiesText": "View Cookies",
+    "GpcBannerTitle": null,
+    "GpcBannerText": null,
+    "GpcBannerAcceptAllCookiesButtonText": null,
+    "HideGpcBannerAcceptAllCookiesButton": false,
+    "GpcBannerAcceptAllExGpcButtonText": null,
+    "HideGpcBannerAcceptAllExGpcButton": false,
+    "GpcBackButtonText": null,
+    "HideGpcBannerBackButton": false,
+    "BannerAcceptAllButtonText": "Accept All Cookies",
+    "BannerRejectAllButtonText": "Reject All Cookies",
+    "PolicyLinkText": null,
+    "Headings": [
+      {
+        "Description": null,
+        "Heading": "DataProcesses",
+        "Text": null
+      },
+      {
+        "Description": null,
+        "Heading": "StoredInformation",
+        "Text": null
+      },
+      {
+        "Heading": "Item",
+        "Text": null
+      },
+      {
+        "Heading": "Type",
+        "Text": null
+      },
+      {
+        "Heading": "Retention",
+        "Text": null
+      },
+      {
+        "Heading": "ServicesTab",
+        "Text": null
+      },
+      {
+        "Heading": "CategoriesTab",
+        "Text": null
+      },
+      {
+        "Heading": "ServicePrivacyPolicyHeading",
+        "Text": null
+      },
+      {
+        "Description": null,
+        "Heading": "ProcessPurposesHeading",
+        "Text": null
+      },
+      {
+        "Description": null,
+        "Heading": "ServiceDescriptionHeading",
+        "Text": null
+      }
+    ],
+    "ProcessedDataCategories": [],
+    "DataProcessingPurposes": [],
+    "PrivacyPolicyURL": ""
+  },
+  "AccessKeys": "499A075B-5E20-447A-B0BB-C08C03A4FBE1, 5A32D611-61F7-480C-B00B-4C652E378155, 0B281909-0554-4F68-A31E-F29FD6DA03CF, D3E4A24E-34F5-4B30-8E9D-BB5A31A981EA, 4F16B052-627E-45CA-B553-5F3C44F37568, 4998B2DC-BF52-4928-A245-020296B351AB, ACC897FB-C1B4-4C54-B154-8FDA5889DBD1, 197F28E5-906F-4145-AB05-0F6286C5B758, 1462BA80-54CF-4DF5-841C-3759C42B9D9F, 63F744D2-0534-474C-A86D-6250EDB462EF, E7416923-6A1B-4414-8CFA-7BA77AE7F1AB, 25FAA484-39E2-4523-B00B-729F427EC66B, 127930C5-2431-44E7-B7DD-221B511115B6, 57C10373-A578-4715-AE2D-01323FE3D33D, 85342A89-7731-4E0D-9940-AE4935918C8E, A7195E93-E5E3-4987-B223-A42C4D4D01C5, 22C19D90-AA3D-48EE-AC8E-F78F09FC7F84, 062FAA48-7453-4256-8185-2AC85651A6D9, B1747ADD-AEA4-4973-B438-36E77EFBA093, 1D3C710C-5B1A-4821-B15D-5FEEA6769EF9, B988757E-ED9D-48C7-AF21-58FEA5812E1B, 667B7585-A889-4D86-B404-F23EB14B96E0, EB8E7002-4DB0-46B1-A69E-8FC90A9BB993, 532EAC3C-DEA5-4975-8F41-B980ABDD2526, F565C1EA-D245-42F9-B6F0-66D1CE70DF05, 52E82602-82A4-4F02-91E9-9F84922C8CA4, 5C3DBCAC-C06C-4D1E-9612-77C86A0C1F0A, 123F42CB-555E-436C-9324-06158188ACAC, D1AFC348-6CBB-4EA8-B097-363235CA8D1D, 190C6380-3060-480A-8C29-8DC3B75843FA, 4AC0699B-5B13-44E2-904B-E5654C14B30B, 8E90C946-6211-4850-9A89-77B7DDFEFA54, 220DE026-F2E8-4A3D-A87C-EB6FA77AFEDF, 204C2468-C1BC-4992-A24F-C1E2DEEFC42F, 89DFF806-624A-49E1-A9FB-00CE1EEC9F6E, DCFCBC66-CDAF-4995-995C-56ACE01B8660, 97CEF27A-4C7B-44AF-8A07-DD113CD6D2BD, 6A70A74A-A67C-407D-A54F-2ECB2CDCB2D1, 70FC507A-01DB-42C4-A810-C2BCB260BD66",
+  "CookieWidgetID": 1337,
+  "Custom1stPartyData": "",
+  "IdentityServiceEndpoint": null,
+  "IdentityServiceUrlPrefix": "ids-usw-test",
+  "JsonCreateTime": "2025-04-11T02:50:27.843",
+  "IABLanguageCode": null,
+  "ReconsentDate": "2025-05-06T12:29:18.74",
+  "SupportedDomains": "all",
+  "CassieCookiesExpiry": 365,
+  "Scripts": [
+    {
+      "BrowserCookieName": "3rd Party Cookie",
+      "ChannelID": 25,
+      "CookieBody": "",
+      "CookieBodyDivID": "",
+      "CookieBodyDivIDOptOut": "",
+      "CookieBodyOptOut": "",
+      "CookieDescription": "3rd Party Cookie",
+      "CookieGUID": "9e070f47-fa07-4555-9f88-d2310297665a",
+      "CookieID": 5,
+      "CookieName": "3rd Party Cookie",
+      "CookieScript": "<script type=\"text/javascript\">\nfunction setCookie(cname, cvalue, exdays) {\n  var d = new Date();\n  d.setTime(d.getTime() + (exdays*24*60*60*1000));\n  var expires = \"expires=\"+ d.toUTCString();\n  document.cookie = cname + \"=\" + cvalue + \";\" + expires + \";path=/\";\n}\n \nsetCookie('3rdpartycookie', 'Yes', 365);\nconsole.log('3rdpartycookieOptin');\n</script>",
+      "CookieScriptOptOut": "<script type=\"text/javascript\">\nfunction setCookie(cname, cvalue, exdays) {\n  var d = new Date();\n  d.setTime(d.getTime() + (exdays*24*60*60*1000));\n  var expires = \"expires=\"+ d.toUTCString();\n  document.cookie = cname + \"=\" + cvalue + \";\" + expires + \";path=/\";\n}\n \nsetCookie('3rdpartycookie', 'NO', 365);\nconsole.log('3rdpartycookieOptout');\n</script>",
+      "CookieURL": "",
+      "ExecutionOrder": 7,
+      "Expiry": 0,
+      "IsLegitimateInterest": false,
+      "GpcEnabled": false,
+      "IsRunFirst": false,
+      "IsStrictlyNecessary": false,
+      "VersionNumber": "1.0",
+      "GtmConsentType": null,
+      "StorageDetails": [
+        {
+          "Name": "3rd Party Cookie",
+          "Type": "Cookie",
+          "Retention": "Session"
+        }
+      ],
+      "Address": null,
+      "ServiceUrls": [],
+      "ProcessedDataCategories": [],
+      "DataProcessingPurposes": []
+    },
+    {
+      "BrowserCookieName": "QA Cookie 1,QA Cookie 2",
+      "ChannelID": 1051,
+      "CookieBody": "",
+      "CookieBodyDivID": null,
+      "CookieBodyDivIDOptOut": null,
+      "CookieBodyOptOut": "",
+      "CookieDescription": "<p>2 Cookies - Is Run First</p>",
+      "CookieGUID": "17260410-8398-4528-bb7f-24c79cda5a1c",
+      "CookieID": 171,
+      "CookieName": "Basic - Universal - User Consent - 1st Party",
+      "CookieScript": "<script type=\"text/javascript\">\n//Cookie 1\nfunction setCookie(cname, cvalue, exdays) {\n var d = new Date();\n d.setTime(d.getTime() + (exdays*24*60*60*1000));\n var expires = \"expires=\"+ d.toUTCString();\n document.cookie = cname + \"=\" + cvalue + \";\" + expires + \";path=/\";\n}\nsetCookie('QACookie1', 'Yes', 365);\n//Cookie 2\nfunction setCookie(cname, cvalue, exdays) {\n var d = new Date();\n d.setTime(d.getTime() + (exdays*24*60*60*1000));\n var expires = \"expires=\"+ d.toUTCString();\n document.cookie = cname + \"=\" + cvalue + \";\" + expires + \";path=/\";\n}\nsetCookie('QACookie2', 'Yes', 364);\n//Cookie 3\nfunction setCookie(cname, cvalue, exdays) {\n var d = new Date();\n d.setTime(d.getTime() + (exdays*24*60*60*1000));\n var expires = \"expires=\"+ d.toUTCString();\n document.cookie = cname + \"=\" + cvalue + \";\" + expires + \";path=/\";\n}\nsetCookie('QACookie3AddedIn', 'Yes', 364);\n</script>",
+      "CookieScriptOptOut": "",
+      "CookieURL": null,
+      "ExecutionOrder": 6,
+      "Expiry": 1,
+      "IsLegitimateInterest": false,
+      "GpcEnabled": false,
+      "IsRunFirst": false,
+      "IsStrictlyNecessary": false,
+      "VersionNumber": "",
+      "GtmConsentType": null,
+      "StorageDetails": [
+        {
+          "Name": "QA Cookie 1",
+          "Type": "Cookie",
+          "Retention": "Session"
+        },
+        {
+          "Name": "QA Cookie 2",
+          "Type": "Cookie",
+          "Retention": "Session"
+        }
+      ],
+      "Address": {
+        "FullLegalName": null,
+        "Address1": null,
+        "Address2": null,
+        "Address3": null,
+        "Address4": null,
+        "Country": null
+      },
+      "ServiceUrls": [],
+      "ProcessedDataCategories": [],
+      "DataProcessingPurposes": []
+    },
+    {
+      "BrowserCookieName": "",
+      "ChannelID": 1236,
+      "CookieBody": "",
+      "CookieBodyDivID": null,
+      "CookieBodyDivIDOptOut": null,
+      "CookieBodyOptOut": "",
+      "CookieDescription": "<p>Delivery essential cookie</p>",
+      "CookieGUID": "67724db5-41ed-4f59-ba57-6a13e2fc5fc4",
+      "CookieID": 177,
+      "CookieName": "Delivery essential cookie",
+      "CookieScript": "<script type=\"text/javascript\">\nfunction setCookie(cname, cvalue, exdays) {\n  var d = new Date();\n  d.setTime(d.getTime() + (exdays*24*60*60*1000));\n  var expires = \"expires=\"+ d.toUTCString();\n  document.cookie = cname + \"=\" + cvalue + \";\" + expires + \";path=/\";\n}\nsetCookie('EssentialCookie', 'Yes', 365);\nconsole.log('EssentialCookie');\n</script>",
+      "CookieScriptOptOut": "",
+      "CookieURL": null,
+      "ExecutionOrder": 2,
+      "Expiry": 0,
+      "IsLegitimateInterest": false,
+      "GpcEnabled": false,
+      "IsRunFirst": false,
+      "IsStrictlyNecessary": true,
+      "VersionNumber": "",
+      "GtmConsentType": null,
+      "StorageDetails": [],
+      "Address": null,
+      "ServiceUrls": [],
+      "ProcessedDataCategories": [],
+      "DataProcessingPurposes": []
+    },
+    {
+      "BrowserCookieName": "_ga,_gid",
+      "ChannelID": 1488,
+      "CookieBody": "",
+      "CookieBodyDivID": null,
+      "CookieBodyDivIDOptOut": null,
+      "CookieBodyOptOut": "",
+      "CookieDescription": "<p>FunctionalityConsent</p>",
+      "CookieGUID": "fd6ca555-e78c-4ad3-8ee9-ac86f871d50c",
+      "CookieID": 192,
+      "CookieName": "Delivery Functionality",
+      "CookieScript": "<script type=\"text/javascript\">\nfunction setCookie(cname, cvalue, exdays) {\n  var d = new Date();\n  d.setTime(d.getTime() + (exdays*24*60*60*1000));\n  var expires = \"expires=\"+ d.toUTCString();\n  document.cookie = cname + \"=\" + cvalue + \";\" + expires + \";path=/\";\n}\nsetCookie('FunctionalityConsent', 'True', 365);\nconsole.log('FunctionalityConsentOptin');\n</script>",
+      "CookieScriptOptOut": "<script type=\"text/javascript\">\nfunction setCookie(cname, cvalue, exdays) {\n  var d = new Date();\n  d.setTime(d.getTime() + (exdays*24*60*60*1000));\n  var expires = \"expires=\"+ d.toUTCString();\n  document.cookie = cname + \"=\" + cvalue + \";\" + expires + \";path=/\";\n}\nsetCookie('FunctionalityConsent', 'False', 365);\nconsole.log('FunctionalityConsentOptout');\n</script>",
+      "CookieURL": null,
+      "ExecutionOrder": 4,
+      "Expiry": 300,
+      "IsLegitimateInterest": false,
+      "GpcEnabled": false,
+      "IsRunFirst": false,
+      "IsStrictlyNecessary": false,
+      "VersionNumber": "",
+      "GtmConsentType": null,
+      "StorageDetails": [
+        {
+          "Name": "_ga",
+          "Type": "Cookie",
+          "Retention": "300 days"
+        },
+        {
+          "Name": "_gid",
+          "Type": "Cookie",
+          "Retention": "300 days"
+        }
+      ],
+      "Address": null,
+      "ServiceUrls": [],
+      "ProcessedDataCategories": [],
+      "DataProcessingPurposes": []
+    },
+    {
+      "BrowserCookieName": "",
+      "ChannelID": 1238,
+      "CookieBody": "",
+      "CookieBodyDivID": null,
+      "CookieBodyDivIDOptOut": null,
+      "CookieBodyOptOut": "",
+      "CookieDescription": "<p>The main aim of a performance cookie is to gather data on how visitors interact with the website. This cookie will also record how often the website is visited and will monitor any performance issues.</p>",
+      "CookieGUID": "96d88c54-07d1-4a50-9b8f-919f1911f3a9",
+      "CookieID": 178,
+      "CookieName": "Delivery performance",
+      "CookieScript": "<script type=\"text/javascript\">\nfunction setCookie(cname, cvalue, exdays) {\n  var d = new Date();\n  d.setTime(d.getTime() + (exdays*24*60*60*1000));\n  var expires = \"expires=\"+ d.toUTCString();\n  document.cookie = cname + \"=\" + cvalue + \";\" + expires + \";path=/\";\n}\nsetCookie('PerformanceCookie', 'Yes', 365);\nconsole.log('PerformanceCookieOptin');\n</script>",
+      "CookieScriptOptOut": "<script type=\"text/javascript\">\nfunction setCookie(cname, cvalue, exdays) {\n  var d = new Date();\n  d.setTime(d.getTime() + (exdays*24*60*60*1000));\n  var expires = \"expires=\"+ d.toUTCString();\n  document.cookie = cname + \"=\" + cvalue + \";\" + expires + \";path=/\";\n}\nsetCookie('PerformanceCookie', 'NO', 365);\nconsole.log('PerformanceCookieOptout');\n</script>",
+      "CookieURL": null,
+      "ExecutionOrder": 3,
+      "Expiry": 0,
+      "IsLegitimateInterest": false,
+      "GpcEnabled": false,
+      "IsRunFirst": true,
+      "IsStrictlyNecessary": false,
+      "VersionNumber": "",
+      "GtmConsentType": null,
+      "StorageDetails": [],
+      "Address": null,
+      "ServiceUrls": [],
+      "ProcessedDataCategories": [],
+      "DataProcessingPurposes": []
+    },
+    {
+      "BrowserCookieName": "Strictly Necessary Cookie",
+      "ChannelID": 16,
+      "CookieBody": "",
+      "CookieBodyDivID": "",
+      "CookieBodyDivIDOptOut": "",
+      "CookieBodyOptOut": "",
+      "CookieDescription": "<p>I am a strictly necessary cookie script</p>",
+      "CookieGUID": "504dfbbf-15dd-4765-9fcd-b3cc5dd399bb",
+      "CookieID": 1,
+      "CookieName": "Strictly Necessary Cookie",
+      "CookieScript": "<script type=\"text/javascript\">\r\n        function setCookie(name,value,days) {\r\n          var expires = \"\";\r\n          var ramdon = 0.0;\r\n          \r\n          ramdon = Math.random();\r\n          \r\n          if (days) {\r\n              var date = new Date();\r\n              date.setTime(date.getTime() + (days*24*60*60*1000));\r\n              expires = \"; expires=\" + date.toUTCString();\r\n          }\r\n\r\n          console.log(ramdon)\r\n          document.cookie = name + \"=\" + (value + \",\" + ramdon || \"\")  + expires;\r\n        }\r\n\r\n   setCookie(\"REG_Cookie00SN\",\"Testing\",30);\r\n</script>",
+      "CookieScriptOptOut": "<script type=\"text/javascript\"> document.cookie = \"REG_Cookie00SN=; expires=Thu, 01 Jan 1970 00:00:00 UTC\" </script>",
+      "CookieURL": "",
+      "ExecutionOrder": 1,
+      "Expiry": 0,
+      "IsLegitimateInterest": false,
+      "GpcEnabled": false,
+      "IsRunFirst": true,
+      "IsStrictlyNecessary": true,
+      "VersionNumber": "1.0",
+      "GtmConsentType": null,
+      "StorageDetails": [
+        {
+          "Name": "Strictly Necessary Cookie",
+          "Type": "Cookie",
+          "Retention": "Session"
+        }
+      ],
+      "Address": {
+        "FullLegalName": null,
+        "Address1": null,
+        "Address2": null,
+        "Address3": null,
+        "Address4": null,
+        "Country": null
+      },
+      "ServiceUrls": [],
+      "ProcessedDataCategories": [],
+      "DataProcessingPurposes": []
+    },
+    {
+      "BrowserCookieName": "",
+      "ChannelID": 1298,
+      "CookieBody": "",
+      "CookieBodyDivID": null,
+      "CookieBodyDivIDOptOut": null,
+      "CookieBodyOptOut": "",
+      "CookieDescription": "<p>Lorem ipsum odor amet, consectetuer adipiscing elit. Congue a purus conubia lobortis curabitur vel. Elit eu justo taciti nec laoreet urna egestas platea venenatis. Amet suspendisse magna placerat eleifend cras vivamus tortor imperdiet. Habitasse scelerisque penatibus dignissim tincidunt aliquet? Fames laoreet bibendum lacus odio imperdiet euismod mi accumsan. Nullam potenti libero suscipit lorem vel mollis. Taciti ornare nullam aliquet viverra ligula odio molestie porta.</p><p><br></p><p>Ipsum molestie amet morbi molestie netus molestie. Pharetra arcu a posuere vestibulum metus ultricies risus cursus. Proin rutrum congue potenti fringilla ornare. Risus imperdiet posuere ullamcorper vehicula et lectus tempor. Ex euismod dignissim in felis tellus hendrerit ac. Pellentesque iaculis convallis rutrum purus ad ac praesent nulla. Sagittis diam nostra rutrum donec tempor? Parturient nascetur fringilla massa inceptos massa primis purus iaculis potenti. Litora est mollis aliquet ac nulla</p>",
+      "CookieGUID": "430c4513-a356-4fe9-a37d-7921ab88be13",
+      "CookieID": 190,
+      "CookieName": "test",
+      "CookieScript": "",
+      "CookieScriptOptOut": "",
+      "CookieURL": null,
+      "ExecutionOrder": 5,
+      "Expiry": 0,
+      "IsLegitimateInterest": false,
+      "GpcEnabled": false,
+      "IsRunFirst": false,
+      "IsStrictlyNecessary": false,
+      "VersionNumber": "",
+      "GtmConsentType": null,
+      "StorageDetails": [],
+      "Address": null,
+      "ServiceUrls": [],
+      "ProcessedDataCategories": [],
+      "DataProcessingPurposes": []
+    }
+  ]
+}
