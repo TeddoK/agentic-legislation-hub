@@ -46,7 +46,7 @@ export default function Sidebar() {
 
       <div className="p-4 border-t border-zinc-800 text-xs text-zinc-500 space-y-1">
         <div>Agentic Legislation Hub</div>
-        <div>RAG over 500+ legal sources · Groq LLM</div>
+        <div>RAG over 500+ documents · Groq LLM</div>
       </div>
     </div>
   )
