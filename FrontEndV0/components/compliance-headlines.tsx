@@ -359,17 +359,23 @@ export default function ComplianceHeadlines({ apiResponse, hasInitialData }: Com
                 </div>
               ) : !hasInitialData ? (
                 <div className="p-8 text-center text-gray-500">
-                  Ask the Compliance Assistant about recent legislative changes to see headlines
+                  Ask the{" "}
+                  <button
+                    onClick={() => document.getElementById("assistant")?.scrollIntoView({ behavior: "smooth" })}
+                    className="text-red-600 hover:underline font-medium"
+                  >
+                    Compliance Assistant
+                  </button>{" "}
+                  a question — the sources behind each answer appear here, auto-categorised.
                 </div>
               ) : (
                 <div className="p-8 text-center text-gray-500">No headlines found</div>
               )}
-              <div className="p-3 border-t">
-                <a href="#" className="text-sm text-gray-600 flex items-center justify-between">
-                  View all headlines
-                  <ChevronRight className="h-4 w-4" />
-                </a>
-              </div>
+              {hasInitialData && headlines.length > 0 && (
+                <div className="p-3 border-t text-xs text-gray-400">
+                  Showing {filteredHeadlines.length} source{filteredHeadlines.length === 1 ? "" : "s"} cited in the latest answer
+                </div>
+              )}
             </TabsContent>
           </Tabs>
         </CardContent>

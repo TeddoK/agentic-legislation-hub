@@ -1,63 +1,52 @@
-import { Home, FileText, User, Settings, MessageSquare, BarChart } from "lucide-react"
-import Link from "next/link"
+"use client"
+
+import { useState } from "react"
+import { Home, FileText, AlertTriangle, MessageSquare, Newspaper } from "lucide-react"
+
+const NAV = [
+  { id: "hero", label: "Overview", icon: Home },
+  { id: "regulations", label: "Regulations", icon: FileText },
+  { id: "conflicts", label: "Conflicts", icon: AlertTriangle },
+  { id: "assistant", label: "AI Assistant", icon: MessageSquare },
+  { id: "headlines", label: "Headlines", icon: Newspaper },
+]
 
 export default function Sidebar() {
+  const [active, setActive] = useState("hero")
+
+  const goTo = (id: string) => {
+    setActive(id)
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
+
   return (
     <div className="w-64 bg-zinc-900 text-white flex flex-col h-full">
       <div className="p-4 flex items-center space-x-2">
-        <div className="h-6 w-6 rounded-full bg-red-600"></div>
+        <div className="h-6 w-6 rounded-full bg-red-600" />
         <h1 className="text-xl font-bold">ComplianceAI</h1>
       </div>
 
-      <div className="mt-6">
-        <h2 className="px-4 py-2 text-xs font-semibold text-zinc-400 uppercase">Main</h2>
+      <div className="mt-6 flex-1">
+        <h2 className="px-4 py-2 text-xs font-semibold text-zinc-400 uppercase">Navigation</h2>
         <nav className="space-y-1 px-2">
-          <Link href="/" className="flex items-center space-x-2 px-4 py-2 text-sm bg-zinc-800 rounded-md">
-            <Home className="h-5 w-5" />
-            <span>Dashboard</span>
-          </Link>
-          <Link
-            href="/compliance"
-            className="flex items-center space-x-2 px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 rounded-md"
-          >
-            <FileText className="h-5 w-5" />
-            <span>Compliance</span>
-          </Link>
-          <Link
-            href="/assistant"
-            className="flex items-center space-x-2 px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 rounded-md"
-          >
-            <MessageSquare className="h-5 w-5" />
-            <span>AI Assistant</span>
-          </Link>
-          <Link
-            href="/reports"
-            className="flex items-center space-x-2 px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 rounded-md"
-          >
-            <BarChart className="h-5 w-5" />
-            <span>Reports</span>
-          </Link>
+          {NAV.map(({ id, label, icon: Icon }) => (
+            <button
+              key={id}
+              onClick={() => goTo(id)}
+              className={`w-full flex items-center space-x-2 px-4 py-2 text-sm rounded-md transition-colors ${
+                active === id ? "bg-red-600 text-white" : "text-zinc-300 hover:bg-zinc-800"
+              }`}
+            >
+              <Icon className="h-5 w-5" />
+              <span>{label}</span>
+            </button>
+          ))}
         </nav>
       </div>
 
-      <div className="mt-6">
-        <h2 className="px-4 py-2 text-xs font-semibold text-zinc-400 uppercase">Settings</h2>
-        <nav className="space-y-1 px-2">
-          <Link
-            href="/profile"
-            className="flex items-center space-x-2 px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 rounded-md"
-          >
-            <User className="h-5 w-5" />
-            <span>Profile</span>
-          </Link>
-          <Link
-            href="/settings"
-            className="flex items-center space-x-2 px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 rounded-md"
-          >
-            <Settings className="h-5 w-5" />
-            <span>Settings</span>
-          </Link>
-        </nav>
+      <div className="p-4 border-t border-zinc-800 text-xs text-zinc-500 space-y-1">
+        <div>Agentic Legislation Hub</div>
+        <div>RAG over 500+ legal sources · Groq LLM</div>
       </div>
     </div>
   )

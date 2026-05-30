@@ -49,11 +49,18 @@ export default function AffectedLocations({ apiResponse, hasInitialData }: Affec
           ) : (
             <>
               <div className="mb-4">
-                <div className="text-3xl font-bold">-</div>
+                <div className="text-3xl font-bold text-gray-300">—</div>
                 <div className="text-sm text-gray-500">Regions with new regulations</div>
               </div>
-              <div className="text-sm text-gray-500">
-                Ask the Compliance Assistant about recent legislative changes to see affected locations
+              <div className="rounded-md bg-gray-50 border border-dashed border-gray-200 p-3 text-sm text-gray-500">
+                Ask the{" "}
+                <button
+                  onClick={() => document.getElementById("assistant")?.scrollIntoView({ behavior: "smooth" })}
+                  className="text-blue-600 hover:underline font-medium"
+                >
+                  Compliance Assistant
+                </button>{" "}
+                a question to populate affected jurisdictions.
               </div>
             </>
           )}

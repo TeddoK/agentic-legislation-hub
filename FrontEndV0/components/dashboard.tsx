@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Sidebar from "@/components/sidebar"
 import Header from "@/components/header"
+import Hero from "@/components/hero"
 import LawChanges from "@/components/law-changes"
 import AffectedLocations from "@/components/affected-locations"
 import ImpactAssessment from "@/components/impact-assessment"
@@ -81,9 +82,13 @@ export default function Dashboard() {
     <div className="flex h-screen bg-zinc-100">
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
-        <Header />
-        <main className="flex-1 overflow-y-auto p-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+        <Header onRefresh={runAnalysis} isLoading={isRegulationsLoading} lastUpdated={lastAnalyzedTime} />
+        <main className="flex-1 overflow-y-auto p-4 scroll-smooth">
+          <div id="hero" className="scroll-mt-4">
+            <Hero />
+          </div>
+
+          <div id="regulations" className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
             <LawChanges
               apiResponse={apiResponse}
               hasInitialData={hasInitialData}
@@ -96,7 +101,7 @@ export default function Dashboard() {
           </div>
 
           {/* Pass regulations data to RegulationConflicts */}
-          <div className="mb-4">
+          <div id="conflicts" className="scroll-mt-4 mb-4">
             <RegulationConflicts
               regulationsData={regulationsData}
               isLoading={isRegulationsLoading}
@@ -106,8 +111,12 @@ export default function Dashboard() {
             />
           </div>
 
-          <ComplianceAssistant onApiResponse={handleApiResponse} />
-          <ComplianceHeadlines apiResponse={apiResponse} hasInitialData={hasInitialData} />
+          <div id="assistant" className="scroll-mt-4">
+            <ComplianceAssistant onApiResponse={handleApiResponse} />
+          </div>
+          <div id="headlines" className="scroll-mt-4">
+            <ComplianceHeadlines apiResponse={apiResponse} hasInitialData={hasInitialData} />
+          </div>
         </main>
       </div>
     </div>

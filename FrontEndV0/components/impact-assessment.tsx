@@ -126,11 +126,18 @@ export default function ImpactAssessment({ apiResponse, hasInitialData }: Impact
           ) : (
             <>
               <div className="mb-4">
-                <div className="text-3xl font-bold">-</div>
+                <div className="text-3xl font-bold text-gray-300">—</div>
                 <div className="text-sm text-gray-500">Regulations affecting your products</div>
               </div>
-              <div className="text-sm text-gray-500">
-                Ask the Compliance Assistant about recent legislative changes to see impact assessments
+              <div className="rounded-md bg-gray-50 border border-dashed border-gray-200 p-3 text-sm text-gray-500">
+                Ask the{" "}
+                <button
+                  onClick={() => document.getElementById("assistant")?.scrollIntoView({ behavior: "smooth" })}
+                  className="text-blue-600 hover:underline font-medium"
+                >
+                  Compliance Assistant
+                </button>{" "}
+                a question to audit your cookie banners against current rules.
               </div>
             </>
           )}
@@ -172,18 +179,13 @@ export default function ImpactAssessment({ apiResponse, hasInitialData }: Impact
                         <h3 className="text-lg font-medium">{assessment.file.replace(".json", "")}</h3>
                       </div>
                       <div className="text-sm text-gray-600 mb-3">{assessment.explanation}</div>
-                      <div className="flex justify-between items-center text-sm border-t pt-3">
-                        <div className="flex items-center">
-                          <span className="font-medium mr-2">Status:</span>
-                          {assessment.impacted ? (
-                            <span className="text-amber-600">Requires attention</span>
-                          ) : (
-                            <span className="text-green-600">Compliant</span>
-                          )}
-                        </div>
-                        <Button size="sm" variant="outline">
-                          Generate Report
-                        </Button>
+                      <div className="flex items-center text-sm border-t pt-3">
+                        <span className="font-medium mr-2">Status:</span>
+                        {assessment.impacted ? (
+                          <span className="text-amber-600">Requires attention</span>
+                        ) : (
+                          <span className="text-green-600">Compliant</span>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -261,8 +263,7 @@ export default function ImpactAssessment({ apiResponse, hasInitialData }: Impact
                 </div>
               </div>
             </div>
-            <div className="p-4 border-t flex justify-between">
-              <Button variant="outline">Export Report</Button>
+            <div className="p-4 border-t flex justify-end">
               <Button onClick={() => setSelectedAssessment(null)}>Close</Button>
             </div>
           </div>
