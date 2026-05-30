@@ -15,7 +15,7 @@ const FEATURES = [
   {
     icon: MessageSquare,
     title: "Answers compliance questions",
-    body: "Ask in plain English — answers are grounded in retrieved source documents, with citations.",
+    body: "Ask in plain English. Answers are grounded in retrieved source documents, with citations.",
   },
   {
     icon: ShieldCheck,

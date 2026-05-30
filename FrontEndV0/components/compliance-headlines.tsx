@@ -366,7 +366,7 @@ export default function ComplianceHeadlines({ apiResponse, hasInitialData }: Com
                   >
                     Compliance Assistant
                   </button>{" "}
-                  a question — the sources behind each answer appear here, auto-categorised.
+                  a question, and the sources behind each answer appear here, auto-categorised.
                 </div>
               ) : (
                 <div className="p-8 text-center text-gray-500">No headlines found</div>
